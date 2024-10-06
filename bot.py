@@ -40,6 +40,11 @@ from Jisshu.bot import JisshuBot
 from Jisshu.util.keepalive import ping_server
 from Jisshu.bot.clients import initialize_clients
 
+from pyrogram import utils as pyroutils
+
+pyroutils.MIN_CHAT_ID = -999999999999
+pyroutils.MIN_CHANNEL_ID = -100999999999999
+
 ppath = "plugins/*.py"
 files = glob.glob(ppath)
 JisshuBot.start()
