@@ -78,7 +78,7 @@ async def send_movie_updates(bot, file_name, caption, file_id):
         poster_url = await get_imdb(movie_name)
         caption_message = f"#New_File_Added ✅\n\nFile_Name:- <code>{movie_name}</code>\n\nLanguage:- {language}\n\nQuality:- {quality}"    
         movie_update_channel = await db.movies_update_channel_id()
-        search_movie = file_name.replace(" ", '-')
+        search_movie = movie_name.replace(" ", '-')
         btn = [
             [InlineKeyboardButton('Get File', url=f'https://telegram.me/{temp.U_NAME}?start=getfile-{search_movie}')]
         ]
