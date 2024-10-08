@@ -57,7 +57,7 @@ async def formatted_name(file_name, caption):
 async def latest_movies(bot, message):
  try:
      last_movies = list(recent_movies)[-20:]
-     message_text = "List of New Added Movies In DB:\n\n"
+     message_text = "<b>List of New Added Movies In DB:</b>\n\n"
      for num, movie_name in enumerate(last_movies, start=1):
          message_text += f"{num}. {movie_name}\n"
      await message.reply_text(message_text)
