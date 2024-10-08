@@ -59,7 +59,7 @@ async def latest_movies(bot, message):
      last_movies = list(recent_movies)[-20:]
      message_text = "<b>List of New Added Movies In DB:</b>\n\n"
      for num, movie_name in enumerate(last_movies, start=1):
-         message_text += f"{num}. {movie_name}\n"
+         message_text += f"<b>{num}. {movie_name}✅️</b>\n"
      await message.reply_text(message_text)
  except Exception as e:
      print(f"Error showing latest movies: {e}")
